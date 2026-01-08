@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>CV Maker by Mr.Rm19</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+:root{--bg:#070916;--card:#0f1230;--acc:#7cf7ff;--acc2:#c77dff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,system-ui;background:var(--bg);color:#eef6ff}
+.wrap{padding:14px;max-width:1100px;margin:auto}
+.grid{display:grid;gap:14px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:16px}
+.h{display:flex;gap:8px;flex-wrap:wrap}
+.sel,input,textarea,button{width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.2);
+background:#0b0e28;color:#eef6ff}
+button{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#001;font-weight:700;border:none}
+.badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.25)}
+.cv{border-radius:16px;overflow:hidden}
+.left{padding:18px;text-align:center;background:linear-gradient(135deg,#0b1b3a,#1a0b3a)}
+.left img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid #fff}
+.right{padding:18px;background:#0b0e28}
+h3{border-bottom:1px dashed rgba(255,255,255,.3)}
+/* Universes */
+.uni-cosmic{--acc:#7cf7ff;--acc2:#c77dff}
+.uni-cyber{--acc:#00ff9c;--acc2:#00c2ff;font-family:monospace}
+.uni-anime{--acc:#ff7ab6;--acc2:#ffd166;color:#1a1025}
+/* Layout */
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+
+<body class="uni-cosmic">
+<div class="wrap">
+<div class="grid">
+
+<!-- FORM -->
+<div class="card">
+<h2>🧬 CV by Kaka Info Lokerz Mr.Rm19</h2>
+
+<div class="h">
+<span class="badge">Persona</span>
+<select id="persona" class="sel">
+<option>Developer</option>
+<option>Hacker</option>
+<option>Designer</option>
+<option>Student</option>
+</select>
+
+<span class="badge">Universe</span>
+<select id="universe" class="sel">
+<option value="uni-cosmic">Cosmic</option>
+<option value="uni-cyber">Cyber Terminal</option>
+<option value="uni-anime">Neon Anime</option>
+</select>
+
+<span class="badge">Timeline</span>
+<select id="timeline" class="sel">
+<option>Junior</option>
+<option>Senior</option>
+<option>Lead</option>
+</select>
+</div>
+
+<input id="name" placeholder="Nama Lengkap">
+<input id="role" placeholder="Role">
+<input id="email" placeholder="Email">
+<input id="phone" placeholder="No HP">
+<input type="file" id="photo" accept="image/*">
+<textarea id="about" placeholder="Tentang Saya"></textarea>
+<textarea id="skills" placeholder="Skill"></textarea>
+<textarea id="exp" placeholder="Pengalaman / Proyek"></textarea>
+
+<button onclick="downloadPDF()">⬇️ Download PDF</button>
+<button onclick="share()">🔗 Share Link</button>
+</div>
+
+<!-- PREVIEW -->
+<div class="card">
+<h2>🛰️ Live Preview</h2>
+
+<div class="cv" id="cv">
+<div class="left">
+<img id="cvPhoto">
+<h2 id="cvName">Nama Kamu</h2>
+<p id="cvRole"></p>
+<p id="cvEmail"></p>
+<p id="cvPhone"></p>
+</div>
+
+<div class="right">
+<h3>Profil</h3><p id="cvAbout"></p>
+<h3>Skill</h3><p id="cvSkills"></p>
+<h3>Pengalaman</h3><p id="cvExp"></p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+/* HELPER */
+const $ = id => document.getElementById(id);
+
+/* PERSONA DESC */
+function personaText(){
+const p=persona.value,t=timeline.value;
+const map={
+Developer:{Junior:"Developer pemula fokus web modern.",
+Senior:"Senior Developer membangun sistem scalable.",
+Lead:"Tech Lead memimpin arsitektur & tim."},
+Hacker:{Junior:"Ethical hacker pemula fokus web security.",
+Senior:"Senior security engineer & pentester.",
+Lead:"Security lead & strategist."},
+Designer:{Junior:"UI Designer kreatif.",
+Senior:"Senior UI/UX problem solver.",
+Lead:"Design lead & product thinker."},
+Student:{Junior:"Mahasiswa aktif & learner.",
+Senior:"Mahasiswa berpengalaman proyek.",
+Lead:"Student leader & mentor."}
+};
+return map[p][t];
+}
+
+/* LIVE UPDATE */
+function update(){
+$("cvName").innerText  = $("name").value || "Nama Kamu";
+$("cvRole").innerText  = $("role").value || `${persona.value} • ${timeline.value}`;
+$("cvEmail").innerText = $("email").value;
+$("cvPhone").innerText = $("phone").value;
+$("cvAbout").innerText = $("about").value || personaText();
+$("cvSkills").innerText= $("skills").value;
+$("cvExp").innerText   = $("exp").value;
+
+const state={
+name:name.value,role:role.value,email:email.value,phone:phone.value,
+about:about.value,skills:skills.value,exp:exp.value,
+persona:persona.value,timeline:timeline.value,universe:universe.value
+};
+localStorage.setItem("mv",JSON.stringify(state));
+history.replaceState(null,"",`#${btoa(JSON.stringify(state))}`);
+}
+
+/* LISTENER */
+document.querySelectorAll("input, textarea, select").forEach(el=>{
+el.addEventListener("input",update);
+el.addEventListener("change",update);
+});
+
+/* PHOTO */
+photo.addEventListener("change",()=>{
+if(photo.files[0]){
+const r=new FileReader();
+r.onload=()=>cvPhoto.src=r.result;
+r.readAsDataURL(photo.files[0]);
+}
+});
+
+/* UNIVERSE */
+universe.onchange=()=>{document.body.className=universe.value; update();}
+
+/* LOAD STATE */
+(function(){
+try{
+const h=location.hash.slice(1);
+const d=h?JSON.parse(atob(h)):JSON.parse(localStorage.getItem("mv")||"{}");
+Object.keys(d||{}).forEach(k=>{ if($(k)) $(k).value=d[k]; });
+document.body.className=d.universe||"uni-cosmic";
+update();
+}catch(e){}
+})();
+
+/* PDF */
+async function downloadPDF(){
+const {jsPDF}=window.jspdf;
+const canvas=await html2canvas($("cv"),{scale:2});
+const img=canvas.toDataURL("image/png");
+const pdf=new jsPDF("p","mm","a4");
+pdf.addImage(img,"PNG",10,10,190,0);
+pdf.save("CV-MULTIVERSE.pdf");
+}
+
+/* SHARE */
+function share(){
+navigator.clipboard.writeText(location.href);
+alert("Link disalin!");
+}
+</script>
+
+</body>
+</html>
