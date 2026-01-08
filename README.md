@@ -35,13 +35,7 @@ Klik gambar untuk melihat ukuran penuh: [cv-anakmuda.png](https://github.com/Mis
 
 Klik gambar untuk melihat ukuran penuh: [cv-Spesial.png](https://github.com/Mister-RdanM19/CV-MAKER/blob/main/cv-Spesial.png)
 
-## Cara melihat
-
-- Untuk melihat template, buka file `.html` yang bersangkutan di browser (klik file di GitHub lalu pilih "View raw" atau clone repo dan buka file lokal).
-- Untuk melihat bukti gambar, buka file PNG langsung di GitHub atau di viewer lokal.
-- Untuk melihat PDF, buka `hasil_CV-SIMPLE.pdf` di browser atau unduh.
-
-## DEMO WEBSITE 
+## CARA PAKAI
 
 Untuk CV SIMPLE LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-simple.html <br>
 Untuk CV ANAK MUDA LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-anakmuda.html <br>
