@@ -43,16 +43,15 @@ Klik gambar untuk melihat ukuran penuh: [cv-Spesial.png](https://github.com/Mist
 
 ## DEMO WEBSITE 
 
-Untuk CV SIMPLE LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-simple.html
-
-<br>
+Untuk CV SIMPLE LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-simple.html <br>
 Untuk CV ANAK MUDA LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-anakmuda.html <br>
-
 Untuk CV SPESIAL LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-spesial.html <br>
 
+
+
+#NOTE
 SEMUA GRATIS, SILAHKAN DI COBA, ada pertanyaan? chat ramdan19id@gmail.com
-
-
+<br>
 2026 . indonesia hacker rulez . Mr.Rm19 - N3i
 
 
