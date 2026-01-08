@@ -49,7 +49,7 @@ Untuk CV SPESIAL LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-spesial.htm
 
 
 
-#NOTE
+## NOTE
 SEMUA GRATIS, SILAHKAN DI COBA, ada pertanyaan? chat ramdan19id@gmail.com
 <br>
 2026 . indonesia hacker rulez . Mr.Rm19 - N3i
