@@ -1,7 +1,7 @@
 # CV-MAKER
 
-Repositori ini berisi beberapa template dan hasil CV yang dihasilkan dari generator CV.
-
+Repositori ini berisi beberapa template dan hasil CV yang dihasilkan dari OTAK Mr.Rm19
+# BACA SAMPAI BAWAH BIAR PINTER, TERIMAKASIH
 ## Daftar file
 
 1) cv-simple
@@ -41,7 +41,19 @@ Klik gambar untuk melihat ukuran penuh: [cv-Spesial.png](https://github.com/Mist
 - Untuk melihat bukti gambar, buka file PNG langsung di GitHub atau di viewer lokal.
 - Untuk melihat PDF, buka `hasil_CV-SIMPLE.pdf` di browser atau unduh.
 
-## Catatan
+## DEMO WEBSITE 
 
-- Pastikan semua file terkait berada di direktori root repo (path relatif seperti tercantum di atas). Jika tidak, sesuaikan path di README.
-- Jika Anda ingin saya menambahkan thumbnail lain, mengubah ukuran thumbnail, atau menambahkan tautan langsung ke setiap file dalam layout yang lebih rapi, beri tahu saya.
+Untuk CV SIMPLE LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-simple.html
+
+<br>
+Untuk CV ANAK MUDA LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-anakmuda.html <br>
+
+Untuk CV SPESIAL LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-spesial.html <br>
+
+SEMUA GRATIS, SILAHKAN DI COBA, ada pertanyaan? chat ramdan19id@gmail.com
+
+
+2026 . indonesia hacker rulez . Mr.Rm19 - N3i
+
+
+
