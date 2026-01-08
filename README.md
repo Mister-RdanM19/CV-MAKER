@@ -19,6 +19,22 @@ Repositori ini berisi beberapa template dan hasil CV yang dihasilkan dari genera
 - Bukti preview: `cv-Spesial.png`
 - Keterangan: Template dengan gaya khusus (spesial). Preview tersedia di `cv-Spesial.png`.
 
+## Preview (thumbnail)
+
+- cv-simple (PDF): 📄 [Buka hasil_CV-SIMPLE.pdf](https://github.com/Mister-RdanM19/CV-MAKER/blob/main/hasil_CV-SIMPLE.pdf)
+
+- cv-anakmuda (thumbnail):
+
+<img src="https://raw.githubusercontent.com/Mister-RdanM19/CV-MAKER/main/cv-anakmuda.png" alt="cv-anakmuda preview" width="360" />
+
+Klik gambar untuk melihat ukuran penuh: [cv-anakmuda.png](https://github.com/Mister-RdanM19/CV-MAKER/blob/main/cv-anakmuda.png)
+
+- cv-spesial (thumbnail):
+
+<img src="https://raw.githubusercontent.com/Mister-RdanM19/CV-MAKER/main/cv-Spesial.png" alt="cv-spesial preview" width="360" />
+
+Klik gambar untuk melihat ukuran penuh: [cv-Spesial.png](https://github.com/Mister-RdanM19/CV-MAKER/blob/main/cv-Spesial.png)
+
 ## Cara melihat
 
 - Untuk melihat template, buka file `.html` yang bersangkutan di browser (klik file di GitHub lalu pilih "View raw" atau clone repo dan buka file lokal).
@@ -28,4 +44,4 @@ Repositori ini berisi beberapa template dan hasil CV yang dihasilkan dari genera
 ## Catatan
 
 - Pastikan semua file terkait berada di direktori root repo (path relatif seperti tercantum di atas). Jika tidak, sesuaikan path di README.
-- Jika Anda ingin saya menambahkan thumbnail, screenshot tambahan, atau memperbaiki teks README, beri tahu saya.
+- Jika Anda ingin saya menambahkan thumbnail lain, mengubah ukuran thumbnail, atau menambahkan tautan langsung ke setiap file dalam layout yang lebih rapi, beri tahu saya.
