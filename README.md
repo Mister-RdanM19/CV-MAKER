@@ -37,9 +37,9 @@ Klik gambar untuk melihat ukuran penuh: [cv-Spesial.png](https://github.com/Mist
 
 ## CARA PAKAI
 
-Untuk CV SIMPLE LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-simple.html <br>
-Untuk CV ANAK MUDA LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-anakmuda.html <br>
-Untuk CV SPESIAL LINK : https://mister-rdanm19.github.io/CV-MAKER/cv-spesial.html <br>
+Untuk CV SIMPLE , KLIK LINK INI ===> https://mister-rdanm19.github.io/CV-MAKER/cv-simple.html <br>
+Untuk CV ANAK MUDA , KLIK LINK INI ===> https://mister-rdanm19.github.io/CV-MAKER/cv-anakmuda.html <br>
+Untuk CV SPESIAL , KLIK LINK INI ===>  https://mister-rdanm19.github.io/CV-MAKER/cv-spesial.html <br>
 
 
 
